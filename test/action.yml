@@ -1,0 +1,20 @@
+name: '一个测试Action'
+author: '17kbz'
+description: '测试自定义Action'
+inputs:
+  intput-test:
+    description: '测试输入'
+    required: true
+    default: '测试输入'
+outputs:
+  output-test:
+    description: '测试输出'
+runs:
+  using: 'composite'
+  steps:
+    - run: echo Hello ${{inputs.input-test}}
+      shell: bash
+    - run: echo "output-test=测试输出" >> $GITHUB_OUTPUT
+      shell: bash
+    - run: $GITHUB_ACTION_PATH\test.sh
+      shell: bash
