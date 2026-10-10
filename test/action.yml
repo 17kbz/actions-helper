@@ -1,8 +1,8 @@
-name: '一个测试Action'
+name: 'TestAction'
 author: '17kbz'
 description: '测试自定义Action'
 inputs:
-  intput-test:
+  input-test:
     description: '测试输入'
     required: true
     default: '测试输入'
@@ -16,5 +16,5 @@ runs:
       shell: bash
     - run: echo "output-test=测试输出" >> $GITHUB_OUTPUT
       shell: bash
-    - run: $GITHUB_ACTION_PATH\test.sh
+    - run: $GITHUB_ACTION_PATH/test.sh
       shell: bash

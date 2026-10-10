@@ -5,7 +5,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - id: test
-            uses: actions-helper/test-action@v1
+            uses: actions-helper/test/test-action@v1
             with:
               input-test: '输入成功'
           - run: echo "$OUTPUT_TEST"
