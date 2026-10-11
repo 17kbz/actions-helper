@@ -9,8 +9,13 @@ inputs:
 runs:
   using: 'composite'
   steps:
+    - name: '参数校验'
+      if: ${{inputs.node-version == null }}
+      shell: bash
+      run: |
+        echo "必须指定Node版本号，请为node-version参数赋值"
+        exit 1
     - name: '安装指定版本的Node'
-      if: ${{inputs.node-version != null }}
       shell: bash
       run: echo ${{inputs.node-version}}
 
