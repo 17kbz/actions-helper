@@ -1,0 +1,16 @@
+name: 'SetupNodeAction'
+author: '17kbz'
+description: '安装指定版本NODE的操作'
+inputs:
+  node-version:
+    description: 'Node版本号'
+    required: true
+    default: null
+runs:
+  using: 'composite'
+  steps:
+    - name: '安装指定版本的Node'
+      if: ${{inputs.node-version == null }}
+      shell: bash
+      run: echo ${{inputs.node-version}}
+
