@@ -10,7 +10,7 @@ runs:
   using: 'composite'
   steps:
     - name: '安装指定版本的Node'
-      if: ${{inputs.node-version == null }}
+      if: ${{inputs.node-version != null }}
       shell: bash
       run: echo ${{inputs.node-version}}
 
