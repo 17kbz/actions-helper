@@ -17,5 +17,5 @@ runs:
         exit 1
     - name: '安装指定版本的Node'
       shell: bash
-      run: echo ${{inputs.node-version}}
+      run: $GITHUB_ACTION_PATH\setup-node.sh
 
