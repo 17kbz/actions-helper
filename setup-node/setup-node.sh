@@ -5,6 +5,6 @@ sudo apt-get update && sudo apt-get install -y curl
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.8/install.sh | bash
 #验证nvm是否安装成功
 export NVM_DIR="$HOME/.nvm"
-[-s "$NVM_DIR/nvm.sh"] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh"] && \. "$NVM_DIR/nvm.sh"
 nvm -v
 
