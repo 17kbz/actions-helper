@@ -9,8 +9,8 @@ export NVM_DIR="$HOME/.nvm"
 nvm -v
 
 #安装指定版本的node
-nvm install node:${{inputs.node-version}}
-nvm use node:${{inputs.node-version}}
+nvm install node:$NODE_VERSION
+nvm use node:$NODE_VERSION
 #验证node是否安装成功
 node -v
 npm -v
