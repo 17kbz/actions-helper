@@ -8,3 +8,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 nvm -v
 
+#安装指定版本的node
+nvm install node:${{inputs.node-version}}
+nvm use node:${{inputs.node-version}}
+#验证node是否安装成功
+node -v
+npm -v
